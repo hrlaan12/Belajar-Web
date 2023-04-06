@@ -1,0 +1,73 @@
+
+/* Untuk tampilan layar besar */
+.navbar {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: slategray;
+}
+.nav-logo{
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.span-logo{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.humburger {
+    display: none;
+}
+.nav-link{
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+.nav-link:hover{
+    color: blanchedalmond;
+}
+
+/* Untuk tampilan layar kecil */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .humburger {
+        display: block;
+    }
+
+    .humburger .bar {
+        display: block;
+        height: 3px;
+        width: 25px;
+        background-color: black;
+        margin: 5px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.8);
+    }
+    .nav-menu.active .nav-link {
+        color:black;
+    }
+}
